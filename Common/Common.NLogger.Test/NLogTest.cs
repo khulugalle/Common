@@ -1,18 +1,19 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 using Common.Interfaces;
+using Common.Nlog;
 
 namespace Common.NLogger.Test
 {
     [TestClass]
-    public class NLoggerTest
+    public class NLogTest
     {
         private ILogger logger;
 
         [TestInitialize]
         public void Setup()
         {
-            logger = new NLogger();
+            logger = new NLog();
         }
 
         [TestCleanup]

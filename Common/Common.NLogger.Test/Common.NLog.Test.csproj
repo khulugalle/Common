@@ -51,7 +51,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NLoggerTest.cs" />
+    <Compile Include="NLogTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,9 +65,9 @@
       <Project>{B8705B1A-4398-4664-AC91-A0CB75B6CEFF}</Project>
       <Name>Common.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Common.Nlog\Common.NLogger.csproj">
+    <ProjectReference Include="..\Common.Nlog\Common.NLog.csproj">
       <Project>{1fbcf34b-0e32-4041-b2ad-986dc73a15f2}</Project>
-      <Name>Common.NLogger</Name>
+      <Name>Common.NLog</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

@@ -5,55 +5,19 @@ namespace Common.Interfaces.Test.Supporting
     /// <summary>
     /// Generic class that implements ILogger
     /// </summary>
-    public class ILoggerConcrete : ILogger
+    public class LoggerInterfaceConcrete : ILogger
     {
-        public Boolean DebugEnabled
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public bool DebugEnabled => true;
 
-        public Boolean ErrorEnabled
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public bool ErrorEnabled => true;
 
-        public Boolean FatalEnabled
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public bool FatalEnabled => true;
 
-        public Boolean InfoEnabled
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public bool InfoEnabled => true;
 
-        public Boolean TraceEnabled
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public bool TraceEnabled => true;
 
-        public Boolean WarnEnabled
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public bool WarnEnabled => true;
 
         public void Debug(Exception excp)
         {
@@ -63,7 +27,7 @@ namespace Common.Interfaces.Test.Supporting
             Console.ForegroundColor = init;
         }
 
-        public void Debug(String message)
+        public void Debug(string message)
         {
             ConsoleColor init = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -79,7 +43,7 @@ namespace Common.Interfaces.Test.Supporting
             Console.ForegroundColor = init;
         }
 
-        public void Error(String message)
+        public void Error(string message)
         {
             ConsoleColor init = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Red;
@@ -98,7 +62,7 @@ namespace Common.Interfaces.Test.Supporting
             Console.BackgroundColor = initBackgroundColour;
         }
 
-        public void Fatal(String message)
+        public void Fatal(string message)
         {
             ConsoleColor initForegroundColour = Console.ForegroundColor;
             ConsoleColor initBackgroundColour = Console.BackgroundColor;
@@ -117,7 +81,7 @@ namespace Common.Interfaces.Test.Supporting
             Console.ForegroundColor = init;
         }
 
-        public void Info(String message)
+        public void Info(string message)
         {
             ConsoleColor init = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Blue;
@@ -133,7 +97,7 @@ namespace Common.Interfaces.Test.Supporting
             Console.ForegroundColor = init; ;
         }
 
-        public void Trace(String message)
+        public void Trace(string message)
         {
             ConsoleColor init = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Gray;
@@ -149,7 +113,7 @@ namespace Common.Interfaces.Test.Supporting
             Console.ForegroundColor = init;
         }
 
-        public void Warn(String message)
+        public void Warn(string message)
         {
             ConsoleColor init = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Yellow;

@@ -1,91 +1,55 @@
 ﻿using System;
 using Common.Interfaces;
 
-namespace Common.NLogger
+namespace Common.Nlog
 {
     /// <summary>
     /// Implementation of the ILogger interface using NLog
     /// </summary>
-    public class NLogger : ILogger
+    public class NLog : ILogger
     {
         /// <summary>
         /// Private NLogger instance
         /// </summary>
-        private NLog.ILogger Logger { get; set; }
+        private global::NLog.ILogger Logger { get; }
 
         /// <summary>
         /// Creates a new instance of NLogger
         /// </summary>
-        public NLogger()
+        public NLog()
         {
-            Logger = NLog.LogManager.GetCurrentClassLogger();
+            Logger = global::NLog.LogManager.GetCurrentClassLogger();
         }
 
         /// <summary>
         /// Checks whether DEBUG level logging is enabled
         /// </summary>
-        public Boolean DebugEnabled
-        {
-            get
-            {
-                return Logger.IsDebugEnabled;
-            }
-        }
+        public bool DebugEnabled => Logger.IsDebugEnabled;
 
         /// <summary>
         /// Checks whether ERROR level logging is enabled
         /// </summary>
-        public Boolean ErrorEnabled
-        {
-            get
-            {
-                return Logger.IsErrorEnabled;
-            }
-        }
+        public bool ErrorEnabled => Logger.IsErrorEnabled;
 
         /// <summary>
         /// Checks whether FATAL level logging is enabled
         /// </summary>
-        public Boolean FatalEnabled
-        {
-            get
-            {
-                return Logger.IsFatalEnabled;
-            }
-        }
+        public bool FatalEnabled => Logger.IsFatalEnabled;
 
         /// <summary>
         /// Checks whether INFO level logging is enabled
         /// </summary>
-        public Boolean InfoEnabled
-        {
-            get
-            {
-                return Logger.IsInfoEnabled;
-            }
-        }
+        public bool InfoEnabled => Logger.IsInfoEnabled;
 
         /// <summary>
         /// Checks whether TRACE level logging is enabled
         /// </summary>
-        public Boolean TraceEnabled
-        {
-            get
-            {
-                return Logger.IsTraceEnabled;
-            }
-        }
+        public bool TraceEnabled => Logger.IsTraceEnabled;
 
         /// <summary>
         /// Checks whether WARN level logging is enabled
         /// </summary>
-        public Boolean WarnEnabled
-        {
-            get
-            {
-                return Logger.IsWarnEnabled;
-            }
-        }
+        public bool WarnEnabled => Logger.IsWarnEnabled;
 
         /// <summary>
         /// Logs a Debug level exception

@@ -8,7 +8,7 @@ namespace Common.Interfaces.Test
     /// Test that all the methods for the interface are called correctly
     /// </summary>
     [TestClass]
-    public class ILoggerTest
+    public class LoggerInterfaceTest
     {
 
         private ILogger logger;
@@ -16,7 +16,7 @@ namespace Common.Interfaces.Test
         [TestInitialize]
         public void Setup()
         {
-            logger = new ILoggerConcrete();
+            logger = new LoggerInterfaceConcrete();
         }
 
         [TestCleanup]
